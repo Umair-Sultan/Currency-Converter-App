@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(209, 188, 161);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.form-container{
+    background-color: white;
+    height: 50vh;
+    width: 20rem;
+    padding: 2rem;
+    justify-items: center;
+}
+
+.form-container h3{
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.input h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+#input-amount{
+    width: 15rem;
+    height: 2rem;
+    padding-left: 1rem;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.dropdowns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
