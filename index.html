@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <div class="form-container">
+        <h3>Currency Converter App</h3>
+
+        <div class="input">
+          <h4>Enter the Amount</h4>
+          <input title="input" placeholder="1" name="input" id="input-amount" />
+        </div>
+
+        <div class="dropdowns">
+          <div class="from-dropdown">
+            <img src="" alt="Flag" />
+            <select title="select" name="flag-select" id="from-select">
+              <option value="US">US</option>
+              <option value="US">UAE</option>
+              <option value="US">IND</option>
+              <option value="US">PAK</option>
+            </select>
+          </div>
+
+          <div class="to-dropdown">
+            <img src="" alt="Flag" />
+            <select title="select" name="flag-select" id="to-select">
+              <option value="US">US</option>
+              <option value="US">UAE</option>
+              <option value="US">IND</option>
+              <option value="US">PAK</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="result">
+          <h4>1 US = 290 PKR</h4>
+        </div>
+
+        <div class="submit-btn">
+          <button type="submit" id="submit">Get Exchange Rate</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
