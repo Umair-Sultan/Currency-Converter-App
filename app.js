@@ -1,4 +1,4 @@
-let baseURL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd/pkr.json"
+
 
 // select user input 
 
@@ -16,6 +16,10 @@ let result = document.querySelector("#result");
 
 let submit = document.querySelector("#submit");
 
+let fromCurr = document.querySelector(".from-dropdown select");
+
+let toCurr = document.querySelector(".to-dropdown select");
+
 // populate the dropdown with countries
 
 for(let select of dropdowns){
@@ -28,7 +32,7 @@ for(let select of dropdowns){
 
         newoption.innerText = country;
 
-        newoption.value = country;
+        newoption.value = countryCode;
 
         if(select.name === "from" && countryCode === "USD"){
 
@@ -55,7 +59,7 @@ for(let select of dropdowns){
 
 const updateFlag = (element) => {
 
-    let currCode = element.value;
+    let currCode = countryList[element.value];
 
     let newSrc = `https://flagsapi.com/${currCode}/shiny/64.png`;
 
@@ -64,25 +68,6 @@ const updateFlag = (element) => {
     img.src = newSrc;
 
 }
-
-submit.addEventListener("click", (evt) => {
-
-    evt.preventDefault();
-
-    let amountVal = inputAmount.value;
-
-    if(amountVal == " " || amountVal <= 0){
-
-        amountVal = 1;
-
-        inputAmount.value = "1";
-
-    }
-
-
-})
-
-
 
 
 
