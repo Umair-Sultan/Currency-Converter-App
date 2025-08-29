@@ -22,11 +22,7 @@
           <div class="from-dropdown">
             <p>From</p>
             <img src="https://flagsapi.com/US/shiny/64.png" alt="Flag" />
-            <select title="select" name="flag-select" id="from-select">
-              <option value="US">US</option>
-              <option value="US">UAE</option>
-              <option value="US">IND</option>
-              <option value="US">PAK</option>
+            <select title="select" name="from" id="from-select">
             </select>
           </div>
 
@@ -37,17 +33,13 @@
           <div class="to-dropdown">
             <p>To</p>
             <img src="https://flagsapi.com/PK/shiny/64.png" alt="Flag" />
-            <select title="select" name="flag-select" id="to-select">
-              <option value="US">US</option>
-              <option value="US">UAE</option>
-              <option value="US">IND</option>
-              <option value="US" selected>PK</option>
+            <select title="select" name="to" id="to-select">
             </select>
           </div>
         </div>
 
         <div class="result">
-          <h4>1 US = 290 PKR</h4>
+          <h4 id="result">1 US = 290 PKR</h4>
         </div>
 
         <div class="submit-btn">
@@ -55,5 +47,8 @@
         </div>
       </div>
     </form>
+
+    <script src="/countrylist.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>
