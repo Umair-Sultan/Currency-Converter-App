@@ -42,6 +42,14 @@ for(let select of dropdowns){
 
         let newoption = document.createElement("option");
 
+        newoption.style.color = "#333"; 
+
+        newoption.style.backgroundColor = "#f0f0f0"; 
+
+        newoption.style.fontWeight = "600";     
+
+        newoption.style.fontFamily = "Arial, sans-serif"; 
+
         newoption.innerText = country;
 
         newoption.value = countryCode;
