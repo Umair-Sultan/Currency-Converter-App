@@ -28,6 +28,10 @@ let fromCurr = document.querySelector(".from-dropdown select");
 
 let toCurr = document.querySelector(".to-dropdown select");
 
+let fromCountryName = document.querySelector(".from-country-name");
+
+let toCountryName = document.querySelector(".to-country-name");
+
 // populate the dropdown with countries
 
 for(let select of dropdowns){
@@ -60,7 +64,10 @@ for(let select of dropdowns){
 
         updateFlag(evt.target);
 
+        updateCountryName(evt.target);
+
     })
+
 }
 
 // function to update flag by selecting the country in fropdow
@@ -76,6 +83,22 @@ const updateFlag = (element) => {
     img.src = newSrc;
 
 }
+
+const updateCountryName = (element) => {
+    
+    if (element.name === "from") {
+
+        fromCountryName.innerText = countryName[element.value];
+
+    }
+
+    else if (element.name === "to") {
+
+        toCountryName.innerText = countryName[element.value];
+
+    }
+};
+
 
 submit.addEventListener("click", (evt) => {
     evt.preventDefault();
@@ -93,17 +116,21 @@ submit.addEventListener("click", (evt) => {
 
         let rate = data[fromCurrency.toLowerCase()][toCurrency.toLowerCase()] * inputAmount.value;
 
-        if (inputAmount.value >= 1111){
+        if (inputAmount.value.length >= 3){
 
             formContainer.style.width = "25rem";
 
-        }if (inputAmount.value >= 11111111){
+        }if (inputAmount.value.length >= 6){
 
             formContainer.style.width = "30rem";
 
-        }if (inputAmount.value >= 11111111111111){
+        }if (inputAmount.value.length >= 9){
 
             formContainer.style.width = "35rem";
+
+        }if (inputAmount.value.length >= 18){
+
+            formContainer.style.width = "40rem";
 
         }
 
@@ -138,4 +165,6 @@ submit.addEventListener("click", (evt) => {
         }
     });
 });
+
+
 
